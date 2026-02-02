@@ -41,7 +41,7 @@ const Navbar = () => {
           <button className='block md:hidden ml-3' onClick={openMenu}>
             <Image src={assets.menu_black} alt='Menu' className='w-6'/>
           </button>
-          <a href="#contact" className='hidden lg:flex items-center gap-3 px-10 py-2.5 border border-gray-500 rounded-full ml-4'>
+          <a href="mailto:alvinacabe@gmail.com" className='hidden lg:flex items-center gap-3 px-10 py-2.5 border border-gray-500 rounded-full ml-4 hover:bg-[#A3B18A]/10 transition'>
             Contact <Image src={assets.arrow_icon} alt="Arrow" className='w-3'/>
           </a>
         </div>

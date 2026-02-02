@@ -8,15 +8,13 @@ const About = () => {
       <h4 className='text-center mb-2 text-lg'>Hey!</h4>
       <h2 id='about' className= 'text-center text-5xl'>My name is Alvin,</h2>
       <div className='flex w-full flex-col lg:flex-row items-center gap-20 my-20'>
-        <div className='w-80 rounded-3x1 flex-shrink-0'>
+        <div className='w-90 rounded-3x1 flex-shrink-0'>
             <Image src={assets.user_image} alt='user' className='w-full rounded-3xl'/>
         </div>
         <div className='flex-1'>
-        <p className='mb-10 max-w-2xl'>A Computer Science student at the University of Florida 
-            passionate about software development, AI, and problem-solving, passionate 
-            about building technology that solves real problems. Always eager to learn, 
-            collaborate, and create impactful technology. I'm open to any networking or career development opportunities, 
-            feel free to reach out to me with any questions or ideas!</p>
+        <p className='mb-5 max-w-2xl'>I’m a Computer Science student at the University of Florida who enjoys turning real-world problems into thoughtful software, shaped by a curiosity for AI, design, and how people interact with technology.</p>
+
+        <p className='mb-10 max-w-2xl'> Outside of code, I love doing calisthenics, I've also been getting into rock climbing! I believe that meaningful conversations and collaboration shape how we think and create, influencing the way we build while highlighting the unique perspective each person brings. Feel free to reach out to me with any questions or ideas!</p>
 
         <ul className='grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-2xl'>
             {infoList.map(({icon, title, description}, index) => (
@@ -28,6 +26,9 @@ const About = () => {
                 </li>
             ))}
         </ul>
+        </div>
+        <div className='hidden 2xl:block w-90 rounded-3x1 flex-shrink-0'>
+            <Image src={assets.user_image_2} alt='user' className='w-full rounded-3xl'/>
         </div>
       </div>
     </div>

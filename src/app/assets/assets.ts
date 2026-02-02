@@ -20,8 +20,10 @@ import send_icon from './send-icon.png';
 import tldr_image from './tldr.jpeg';
 import taskmate_image from './TaskMate.jpg';
 import user_image from './user-image.jpeg';
+import user_image_2 from './user-image-2.jpeg';
 import react_icon from './react.svg'
 import next_icon from './next.svg'
+
 
 export const assets = {
     code_icon,
@@ -47,8 +49,10 @@ export const assets = {
     tldr_image,
     taskmate_image,
     user_image,
+    user_image_2,
     next_icon
 };
+
 
 export const workData = [
     {
@@ -129,7 +133,7 @@ export const LeadershipData = [
     organization: "Association for Computing Machinery",
     role: "Design Team Lead",
     dates: "Nov 2025 - Present",
-    description: "",
+    description: "Leading a team in the ongoing development of a multi-organization attendance management platform for UF ACM, coordinating frontend engineers while overseeing system design, role-based admin access, and customizable, secure check-in workflows.",
   },
   {
     organization: "Management Leadership for Tomorrow",
