@@ -8,7 +8,7 @@ const About = () => {
       <h4 className='text-center mb-2 text-lg'>Hey!</h4>
       <h2 id='about' className= 'text-center text-5xl'>My name is Alvin,</h2>
       <div className='flex w-full flex-col lg:flex-row items-center gap-20 my-20'>
-        <div className='w-90 rounded-3x1 flex-shrink-0'>
+        <div className='w-90 rounded-3x1 shrink-0'>
             <Image src={assets.user_image} alt='user' className='w-full rounded-3xl'/>
         </div>
         <div className='flex-1'>
@@ -27,7 +27,7 @@ const About = () => {
             ))}
         </ul>
         </div>
-        <div className='hidden 2xl:block w-90 rounded-3x1 flex-shrink-0'>
+        <div className='hidden 2xl:block w-90 rounded-3x1 shrink-0'>
             <Image src={assets.user_image_2} alt='user' className='w-full rounded-3xl'/>
         </div>
       </div>
