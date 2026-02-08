@@ -63,12 +63,12 @@ const Slideshow = () => {
         {/* Main Slideshow  */}
         <div className='relative aspect-video rounded-2xl overflow-hidden shadow-2xl group cursor-pointer' onClick={() => setIsModalOpen(true)}>
           {/* Current Image */} 
-          <div className='relative w-full h-full'>
+          <div className='relative w-full h-full bg-gray-900'>
             <Image
               src={slideshowImages[currentIndex]}
               alt={`Slide ${currentIndex + 1}`}
               fill
-              className='object-cover'
+              className='object-contain'
               priority
             />
           </div>
@@ -120,7 +120,7 @@ const Slideshow = () => {
             <button
               key={index}
               onClick={() => goToSlide(index)}
-              className={`relative aspect-video rounded-lg overflow-hidden transition duration-300 ${
+              className={`relative aspect-video rounded-lg overflow-hidden transition duration-300 bg-gray-900 ${
                 index === currentIndex
                   ? 'ring-4 ring-[#A3B18A] scale-105'
                   : 'opacity-60 hover:opacity-100'
@@ -130,7 +130,7 @@ const Slideshow = () => {
                 src={image}
                 alt={`Thumbnail ${index + 1}`}
                 fill
-                className='object-cover'
+                className='object-contain'
               />
             </button>
           ))}
@@ -153,50 +153,55 @@ const Slideshow = () => {
           className='fixed inset-0 z-[100] bg-black/90 flex items-center justify-center p-4'
           onClick={() => setIsModalOpen(false)}
         >
-          <button
-            onClick={() => setIsModalOpen(false)}
-            className='absolute top-4 right-4 text-white bg-black/50 hover:bg-black/70 p-3 rounded-full transition'
-            aria-label='Close modal'
-          >
-            <FaTimes className='text-2xl' />
-          </button>
+          <div className='relative max-w-7xl max-h-[90vh] w-full h-full' onClick={(e) => e.stopPropagation()}>
+            <button
+              onClick={(e) => {
+                e.stopPropagation()
+                setIsModalOpen(false)
+              }}
+              className='absolute top-4 right-4 z-50 text-white bg-black/50 hover:bg-black/70 p-3 rounded-full transition cursor-pointer'
+              aria-label='Close modal'
+            >
+              <FaTimes className='text-2xl' />
+            </button>
 
-          <div className='relative max-w-7xl max-h-[90vh] w-full h-full'>
-            <Image
-              src={slideshowImages[currentIndex]}
-              alt={`Slide ${currentIndex + 1} - Full view`}
-              fill
-              className='object-contain'
-              onClick={(e) => e.stopPropagation()}
-            />
-          </div>
+            <div className='relative w-full h-full max-w-7xl max-h-[90vh] mx-auto'>
+              <Image
+                src={slideshowImages[currentIndex]}
+                alt={`Slide ${currentIndex + 1} - Full view`}
+                fill
+                className='object-contain'
+                onClick={(e) => e.stopPropagation()}
+              />
+            </div>
 
-          {/* Modal Navigation */}
-          <button
-            onClick={(e) => {
-              e.stopPropagation()
-              goToPrevious()
-            }}
-            className='absolute left-4 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white text-gray-800 p-4 rounded-full transition hover:scale-110'
-            aria-label='Previous slide'
-          >
-            <FaChevronLeft className='text-2xl' />
-          </button>
+            {/* Modal Navigation */}
+            <button
+              onClick={(e) => {
+                e.stopPropagation()
+                goToPrevious()
+              }}
+              className='absolute left-4 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white text-gray-800 p-4 rounded-full transition hover:scale-110'
+              aria-label='Previous slide'
+            >
+              <FaChevronLeft className='text-2xl' />
+            </button>
 
-          <button
-            onClick={(e) => {
-              e.stopPropagation()
-              goToNext()
-            }}
-            className='absolute right-4 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white text-gray-800 p-4 rounded-full transition hover:scale-110'
-            aria-label='Next slide'
-          >
-            <FaChevronRight className='text-2xl' />
-          </button>
+            <button
+              onClick={(e) => {
+                e.stopPropagation()
+                goToNext()
+              }}
+              className='absolute right-4 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white text-gray-800 p-4 rounded-full transition hover:scale-110'
+              aria-label='Next slide'
+            >
+              <FaChevronRight className='text-2xl' />
+            </button>
 
-          {/* Modal Slide Counter */}
-          <div className='absolute bottom-4 left-1/2 -translate-x-1/2 bg-black/60 text-white px-6 py-3 rounded-full text-lg font-medium'>
-            {currentIndex + 1} / {slideshowImages.length}
+            {/* Modal Slide Counter */}
+            <div className='absolute bottom-4 left-1/2 -translate-x-1/2 bg-black/60 text-white px-6 py-3 rounded-full text-lg font-medium' onClick={(e) => e.stopPropagation()}>
+              {currentIndex + 1} / {slideshowImages.length}
+            </div>
           </div>
         </div>
       )}
