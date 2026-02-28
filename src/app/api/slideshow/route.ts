@@ -3,7 +3,7 @@ import fs from 'fs'
 import path from 'path'
 
 const SLIDESHOW_DIR = 'slideshow'
-const IMAGE_EXTENSIONS = new Set(['.jpeg', '.jpg', '.png', '.gif', '.webp'])
+const IMAGE_EXTENSIONS = new Set(['.jpeg', '.jpg', '.png', '.gif'])
 
 export async function GET() {
   try {

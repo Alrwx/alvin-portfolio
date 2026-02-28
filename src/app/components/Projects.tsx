@@ -27,15 +27,15 @@ const Projects = () => {
                                 <h3 className='font-semibold'>{project.title}</h3>
                                 <p className='text-sm text-gray-600'>{project.description}</p>
                             </div>
-                            <div className='flex items-center gap-3 flex-shrink-0'>
+                            <div className='flex items-center gap-3 shrink-0'>
                                 {project.githubLink && (
-                                    <a href={project.githubLink} target='_blank' rel='noopener noreferrer' aria-label='GitHub repository' className='flex-shrink-0'>
-                                        <Image src={assets.send_icon} alt='GitHub link' className='w-5 h-5 flex-shrink-0'/>
+                                    <a href={project.githubLink} target='_blank' rel='noopener noreferrer' aria-label='GitHub repository' className='shrink-0'>
+                                        <Image src={assets.send_icon} alt='GitHub link' className='w-5 h-5 shrink-0'/>
                                     </a>
                                 )}
                                 {project.demoLink && (
-                                    <a href={project.demoLink} target='_blank' rel='noopener noreferrer' aria-label='YouTube demo' className='flex-shrink-0'>
-                                        <FaYoutube className='text-lg text-red-600 w-5 h-5 flex-shrink-0'/>
+                                    <a href={project.demoLink} target='_blank' rel='noopener noreferrer' aria-label='YouTube demo' className='shrink-0'>
+                                        <FaYoutube className='text-lg text-red-600 w-5 h-5 shrink-0'/>
                                     </a>
                                 )}
                             </div>

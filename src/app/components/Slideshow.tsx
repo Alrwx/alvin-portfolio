@@ -63,7 +63,7 @@ const Slideshow = () => {
         {/* Main Slideshow  */}
         <div className='relative aspect-video rounded-2xl overflow-hidden shadow-2xl group cursor-pointer' onClick={() => setIsModalOpen(true)}>
           {/* Current Image */} 
-          <div className='relative w-full h-full bg-gray-900'>
+          <div className='relative w-full h-full bg-black'>
             <Image
               src={slideshowImages[currentIndex]}
               alt={`Slide ${currentIndex + 1}`}
@@ -150,7 +150,7 @@ const Slideshow = () => {
       {/* Modal */}
       {isModalOpen && (
         <div 
-          className='fixed inset-0 z-[100] bg-black/90 flex items-center justify-center p-4'
+          className='fixed inset-0 z-100 bg-black/90 flex items-center justify-center p-4'
           onClick={() => setIsModalOpen(false)}
         >
           <div className='relative max-w-7xl max-h-[90vh] w-full h-full' onClick={(e) => e.stopPropagation()}>

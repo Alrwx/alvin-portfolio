@@ -21,8 +21,8 @@ const Header = () => {
           A CS student trying his best
         </h1>
         
-        <p className='max-w-2xl mx-auto text-base md:text-lg text-gray-600 dark:text-gray-400 leading-relaxed text-stone-600 leading-relaxed border-l-4 border-[#A3B18A] pl-4 italic'>
-          Computer Science student at the University of Florida with a passion for high-performance systems and intentional yet scalable design. I bridge the gap between robust backend logic and fluid frontend experiences.
+        <p className='max-w-2xl mx-auto text-base md:text-lg text-gray-600 dark:text-gray-400 '>
+          I’m a Computer Science student at the University of Florida with a minor in Electrical Engineering, and I live by a simple philosophy: I’m not afraid of being lost, but of staying lost. I specialize in backend development, database management, scalability, reliability, system design, and building tools that make people's lives easier.
         </p>
         
         <div className='flex justify-center items-center gap-6 pt-4'>
